@@ -1,0 +1,317 @@
+
+*{
+    margin: 0;
+    padding: 0;  
+    /* Nunca superara el tamaña definido. ni ancho ni alto */
+    box-sizing: border-box; 
+}
+
+
+:root{
+/*ROOT SE UTILIZA PARA CREAR VARIABLES QUE SEAN REPETITIVOS DENTRO DEL SITIO WEB, COMO COLORES, TAMAÑOS, MARGENES, ETC */
+    --primary-color: #1b0aff;
+    --secondary-color: #238283;
+
+}
+body{
+    background: url(../img/wallhaven-5wp2j1.jpg);
+}
+h1{
+    color: rgb(23, 2, 255);
+    font-size: 45px;
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+
+.fila{
+    display: flex;
+    width: 1024px;
+    margin: 45px auto;
+    border: 2px solid var(--primary-color);
+
+
+}
+
+.fila .contBotones{
+    width: 50%;
+    background: var(--primary-color);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.contBotones h2{
+    color: #ffffff;
+    font-size: 40px;
+    margin-bottom: 20px;
+
+}
+
+.contBotones button{
+    padding: 6px 18px;
+    background: #ffffff;
+    color: var(--primary-color);
+    border: 1px solid transparent;
+    font-size: 20px;
+    margin: 12px;
+    transition: .5s;
+}
+.contBotones button:hover{
+    padding: 20px 30px;
+    margin: 7px;
+    box-shadow: 5px 5px #000000;
+}
+
+.fila .contFigura{
+    text-align: center;
+    width: 50%;
+    padding: 30px 20px;
+}
+
+.contFigura h2{
+    font-size:  40px;
+    color:rgb(0, 47, 255);
+    margin-bottom: 25px;
+}
+.contFigura #figura{
+    width: 160px;
+    height: 160px;
+    background: rgb(23, 26, 194);
+    margin: 40px auto;
+    border: 1px solid rgb(0, 0, 0);
+    transition: 1s;
+}
+
+#figura.circulo{
+    border-radius: 50%;
+    transform: rotate(360deg);
+
+}
+
+#figura.rombo{
+    /*Rotate: sirve para girar 
+    sacle: sirve para aumentar/disminuir 
+    translate: sirve para mover en eje x, y
+    skew: sirve para distorcionar*/
+    border-radius: 0;
+    transform: rotate(405deg);
+
+
+}
+
+#figura.rectanguloh{
+    width: 300px;
+}
+
+#figura.rectangulov{
+    height: 300px;
+}
+
+#figura.arriba{
+    transform: translateY(-80px);
+}
+
+#figura.abajo{
+    transform: translateY(80px);
+}
+
+#figura.izquierda{
+    transform: translateX(-80px);
+}
+
+#figura.derecha{
+    transform: translateX(80px);
+}
+
+#figura.diagonal{
+    transform: translate(150px, 100px);
+}
+
+#figura.triangulo{
+    width: 0;
+    height: 0;
+    background: transparent;
+    border-right: 100px solid transparent;
+    border-top: 100px solid transparent;
+    border-left: 100px solid transparent;
+    border-bottom: 100px solid coral;
+
+}
+
+#figura.imagen{
+    width: 300px;
+    background: url(../img/khaby-really.gif);
+    background-size: cover;
+    border: transparent;
+}
+#figura.circulo1 {
+    width: 100px;  
+    height: 100px; 
+    border: 2px solid #555; 
+    background: var(--primary-color);
+    -moz-border-radius: 0 100% 0 0;
+    -webkit-border-radius: 0 100% 0 0;
+    border-radius: 0 100% 0 0;
+    transform: rotate(360deg);
+}
+.semicirculo{
+    width: 100px; 
+    height: 50px; 
+    border: 2px solid #555; 
+    background: #5cb85c;
+    -moz-border-radius: 100px 100px 0 0;
+    -webkit-border-radius: 100px 100px 0 0;
+    border-radius: 100px 100px 0 0;
+}
+.paralelogramo{
+    width: 150px; 
+    height: 100px; 
+    border: 3px solid #555; 
+    background: #428bca;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    transform: skew(20deg);
+}
+#figura.sombreado{
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-box-shadow: 30px 10px 0 #474b867a;
+    -webkit-box-shadow: 30px 10px 0 #428bca;
+    box-shadow: 30px 10px 0 #428bca;
+}
+#figura.trapecio{
+    width: 250px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 100px solid #428bca;
+}
+
+
+/*CAPTURAR DATOS*/
+.fila .contform{ 
+    width: 50%;
+    background: #0f02ff;
+    color:#f7f8f7;
+    text-align: center;
+    padding: 40px;
+}
+h1{
+    color: rgb(0, 0, 247);
+    font-size: 45px;
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+.fila .contform h2{
+    font-size: 30px;
+
+}
+.fila .contform{
+    font-size: 24px;
+}
+
+.contform form .formGroup{
+    padding: 10px 50px;
+    text-align: left;
+}
+form .formGroup label{
+    display: block;
+}
+form .formGroup input{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+form .formGroup select{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+form .formGroup textarea{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+form button{
+    background: #1500ff9f;
+    font-size:  20px;
+    padding: 12px 40px;
+    color: hwb(0 100% 0%);
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .5s;
+    
+}
+form button:hover{
+    padding: 12px 60px;
+    
+   }
+form{
+     margin-top: 40px;
+    }
+.fila .contAvatar{
+    text-align: center;
+    padding: 40px;
+    background: white;
+    width: 50%;
+}
+
+.fila .contAvatar img{
+    width: 200px;
+}
+.fila .contAvatar h3{
+    font-size: 30px;
+    color: #2f4d74;
+    margin-bottom: 15px;
+
+}
+.fila .contAvatar p{
+    color: #2f4d74;
+    font-size: 26px;
+    margin-bottom: 15px;
+
+}
+
+#contAvatar.Morado{
+    background: #ea05ffbc;
+}
+#contAvatar.Amarillo{
+    background: #fbff05cd;
+}
+#contAvatar.Azul{
+    background: #1201fac4;
+}
+#contAvatar.Verde{
+    background: #00ff00a5;
+}
+#contAvatar.Rojo{
+    background: #d23737b9;
+}
+
+.btn-nav{
+    position: absolute;
+    bottom: 100px;
+    right: 120px;
+    background: hsl(239, 100%, 50%);
+    color:#f7f8f7;
+    padding: 12px 40px;
+    text-decoration: none;
+    transition: .5s;
+}
+.btn-nav:hover{
+    padding: 17px 45px;
+    box-shadow: 5px 5px #000000;
+}
+
+/*5 ejercicios*/
+
+
+
